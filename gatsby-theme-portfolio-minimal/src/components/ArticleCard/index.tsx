@@ -10,6 +10,7 @@ export interface ArticleCard {
     image?: ImageObject;
     category: string;
     title: string;
+    title2: string;
     publishedAt: Date;
     readingTime?: string;
     link: string;
@@ -47,13 +48,10 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
             )}
             <div className={classes.DescriptionWrapper}>
                 <span className={classes.Category}>
-                    <u>{props.data.category}</u>
+                    <b>{props.data.category}</b>
                 </span>
                 <h4 className={classes.Title}>{props.data.title}</h4>
-                <div className={classes.Details}>
-                    {formatDate(props.data.publishedAt)}
-                    {props.data.readingTime && <span className={classes.ReadingTime}>{props.data.readingTime}</span>}
-                </div>
+                <h4 className={classes.Title}>{props.data.title2}</h4>
             </div>
         </article>
     );
@@ -99,7 +97,7 @@ export function ArticleCardSkeleton(): React.ReactElement {
     );
 }
 
-function formatDate(date: Date): string {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-}
+// function formatDate(date: Date): string {
+//     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+//     return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+// }

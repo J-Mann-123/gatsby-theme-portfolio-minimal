@@ -43,10 +43,15 @@
 }
 
 .Card .Category {
-    color: var(--primary-color);
+    padding-bottom: 20px;
+    color: #13a5a3;
     text-transform: uppercase;
     letter-spacing: +1px;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .Card .Title {
@@ -54,6 +59,10 @@
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .Card .Details {
